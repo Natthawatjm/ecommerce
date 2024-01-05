@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <title>Luxury Style - Product Page</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <link rel="stylesheet" href="./assets/css/pro.css">
+    <!--
+
+    TemplateMo 571 Hexashop
+
+    https://templatemo.com/tm-571-hexashop
+
+    -->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo2.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">HOME</a></li>
+                            <li class="scroll-to-section"><a href="index.html">MEN</a></li>
+                            <li class="scroll-to-section"><a href="index.html">WOMEN</a></li>
+                            <li class="scroll-to-section"><a href="index.html">KIDS</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">PAGES</a>
+                                <ul>
+                                    <li><a href="about.html">ABOUT US</a></li>
+                                    <li><a href="products.html">PRODUCTS</a></li>
+                                    <li><a href="single-product.html">SINGLE PRODUCT</a></li>
+                                    <li><a href="contact.html">CONTACT US</a></li>
+                                </ul>
+                            </li>
+                            <li class="scroll-to-section" ><a href="index.html">EXPLORE</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                <ul>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Order history</a></li>
+                                    <li class="scroll-to-section"><a href="/login">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li onclick="openCart() " style="cursor: pointer;" >
+                                <a>
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <div id="cartcount" class="cartcount" style="display: none;">
+                                        0
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Check Our Products</h2>
+                        <span>Luxury Style &amp; เสื้อผ้าสุดอินเทรนด์ ที่พร้อมให้คุณได้สวมใส่อย่างมีสไตล์</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+    <!-- ***** Products Area Starts ***** -->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Our Latest Products</h2>
+                        <span>Check out all of our products.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id="productlist">
+
+            </div>
+    </section>
+
+
+
+    <div id="modalDesc" class="modal" style="display: none;">
+        <div onclick="closeModal()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>Detail</h2>
+            <br>
+            <div class="modaldesc-content">
+                <img id="mdd-img" class="modaldesc-img"
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                    alt="">
+                <div class="modaldesc-detail">
+                    <p id="mdd-name" style="font-size: 1.5vw;">Product name</p>
+                    <p id="mdd-price" style="font-size: 1.2vw;">500 THB</p>
+                    <br>
+                    <p id="mdd-desc" style="color: #adadad;">Lorem iaudantium harum doloremque alias. Quae, vel ipsum
+                        quasi, voluptas, sit optio nemo magni numquam non dicta voluptates porro! Vero eveniet numquam
+                        sit aut vel eligendi officiis iste tenetur expedita. Delectus vero quibusdam adipisci in. Esse.
+                    </p>
+                    <br>
+                    <div class="btn-control">
+                        <button onclick="closeModal()" class="btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalCart" class="modal" style="display: none;">
+        <div onclick="closeModal()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>My cart</h2>
+            <br>
+            <div id="mycart" class="cartlist">
+
+            </div>
+            <div class="btn-control">
+                <button onclick="closeModal()" class="btn">
+                    Cancel
+                </button>
+                <button onclick="closeModal()" class="btn btn-buy">
+                    Buy
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/white-logo3.png" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <ul>
+                            <li><a href="#">จรัญสนิทวงศ์ 67 แขวงบางพลัด เขตบางพลัด กรุงเทพมหานคร 10700</a></li>
+                            <li><a href="#">Luxurystyle@company.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Men’s Shopping</a></li>
+                        <li><a href="#">Women’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2022 LuxuryStyle Co., Ltd. All Rights Reserved.
+
+                            <br>Design: <a href="https://templatemo.com" target="_parent"
+                                title="free css templates">TemplateMo</a>
+
+                            <br>Distributed By: <a href="https://themewagon.com" target="_blank"
+                                title="free & premium responsive templates">ThemeWagon</a>
+                        </p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-apple"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/product.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        var product = [{
+            id: 1,
+            img: 'http://localhost:3000/assets/images/men-01.jpg',
+            name: 'เสื้อเชิ้ตแจ็คเก็ต',
+            price: 2490.00,
+            description: 'Relaxed cut for a casual style. The pockets are versatile and practical.',
+            type: 'shoe'
+        }, {
+            id: 2,
+            img: 'http://localhost:3000/assets/images/men-02.jpg',
+            name: 'เสื้อเชิ้ตแจ็คเก็ต Utility',
+            price: 1990.00,
+            description: 'เสื้อแจ็คเก็ตสไตล์เวิร์กแวร์ ทำจากผ้าที่ให้ความอุ่นสบาย มาพร้อมกระเป๋าที่ตอบโจทย์การใช้งาน',
+            type: 'shirt'
+        }, {
+            id: 3,
+            img: 'http://localhost:3000/assets/images/men-03.jpg',
+            name: 'เสื้อสเวตเตอร์',
+            price: 1490.00,
+            description: 'ทรงสวยทันสมัยพร้อมผิวสัมผัสและสีที่ดูเรียบหรู กระชับเข้ารูปแต่ไม่อึดอัด',
+            type: 'shoe'
+        }, {
+            id: 4,
+            img: 'http://localhost:3000/assets/images/women-1.png',
+            name: 'เสื้อโค้ท Tailored',
+            price: 3490.00,
+            description: 'This tailored coat styles with the collar up or down to suit different styles and weather.',
+            type: 'shoe'
+        }, {
+            id: 5,
+            img: 'http://localhost:3000/assets/images/women-2.png',
+            name: 'เสื้อยืด คอสูง แขนยาว',
+            price: 590.00,
+            description: 'ผ้าลายนูนเพื่อความกระชับและสวยงาม เนื้อผ้าหนาเป็นพิเศษสามารถใส่ได้โดยไม่ต้องสวมทับอีกชั้น',
+            type: 'shoe'
+        }, {
+            id: 6,
+            img: 'http://localhost:3000/assets/images/women-03.jpg',
+            name: 'เสื้อคาร์ดิแกน',
+            price: 990.00,
+            description: 'สัมผัสนุ่มไม่ระคายผิว สวมใส่สไตล์เสื้อสวมหัวได้เพียงแค่ติดกระดุม',
+            type: 'shoe'
+        }, {
+            id: 7,
+            img: 'http://localhost:3000/assets/images/kid-1.png',
+            name: 'เสื้อ Ultra Stretch ผ้าสเวต ',
+            price: 790.00,
+            description: 'เสื้อสวมหัวผ้าสเวตใส่สบายที่ยืดหยุ่นอย่างน่าทึ่ง พร้อมโลโก้ที่ดูดีมีสไตล์',
+            type: 'shoe'
+        }, {
+            id: 8,
+            img: 'http://localhost:3000/assets/images/kid-3.png',
+            name: 'เสื้อยืด ผ้าคอตตอนคอกลม',
+            price: 190.00,
+            description: 'อุ่นสบายทำจากผ้าบรัชเนื้อฟูนุ่มที่สวมใส่ตัวเดียวก็อุ่นสบาย',
+            type: 'shoe'
+        }, {
+            id: 9,
+            img: 'http://localhost:3000/assets/images/kid-4.png',
+            name: 'เสื้อ Blouson ผ้าฟลีซ',
+            price: 990.00,
+            description: 'ไอเทมยอดนิยมมีจำหน่ายในคอลเลคชันสำหรับผู้หญิงแล้วตามเสียงตอบรับจากลูกค้า เนื้อผ้าสัมผัสนุ่มเบาสบายผสานคุณสมบัติกันลมเพื่อความอบอุ่นอย่างมั่นใจ',
+            type: 'shoe'
+        }];
+
+        // [{},{},{}] // length = 3
+
+        $(document).ready(() => {
+            var html = '';
+            for (let i = 0; i < product.length; i++) {
+                html += `
+                            <div class="col-lg-4">
+                                <div class="item">
+                                    <div class="thumb">
+                                        <div class="hover-content">
+                                            <ul>
+                                                <li>
+                                                    <a onclick="openProductDetail(${i})">
+                                                        <i class="fa fa-eye"></i>
+                                          
+                                                    </a>
+                                                </li>
+                                                <li><a><i class="fa fa-star"></i></a></li>
+                                                <li><a onclick="addtocart(${[i]})"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                       
+                                        <img  src="${product[i].img}" alt="">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>${product[i].name}</h4>
+                                        <span>THB ${product[i].price}</span>
+                                        <ul class="stars">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+            }
+            $("#productlist").html(html);
+
+        })
+        
+        
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+
+var productindex = 0;
+function openProductDetail(index) {
+    productindex = index;
+    console.log(productindex)
+    $("#modalDesc").css('display', 'flex')
+    $("#mdd-img").attr('src', product[index].img);
+    $("#mdd-name").text(product[index].name)
+    $("#mdd-price").text( numberWithCommas(product[index].price) + ' THB')
+    $("#mdd-desc").text(product[index].description)
+}
+
+function closeModal() {
+    $(".modal").css('display','none')
+}
+
+var cart = [];
+function addtocart() {
+    var pass = true;
+
+    for (let i = 0; i < cart.length; i++) {
+        if( productindex == cart[i].index ) {
+            console.log('found same product')
+            cart[i].count++;
+            pass = false;
+        }
+    }
+
+    if(pass) {
+        var obj = {
+            index: productindex,
+            id: product[productindex].id,
+            name: product[productindex].name,
+            price: product[productindex].price,
+            img: product[productindex].img,
+            count: 1
+        };
+        // console.log(obj)
+        cart.push(obj)
+    }
+    console.log(cart)
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Add ' + product[productindex].name + ' to cart !'
+    })
+    $("#cartcount").css('display','flex').text(cart.length)
+}
+
+function openCart() {
+    $('#modalCart').css('display','flex')
+    rendercart();
+}
+
+function rendercart() {
+    if(cart.length > 0) {
+        var html = '';
+        for (let i = 0; i < cart.length; i++) {
+            html += `<div class="cartlist-items">
+                        <div class="cartlist-left">
+                            <img src="${cart[i].img}" alt="">
+                            <div class="cartlist-detail">
+                                <p style="font-size: 1.5vw;">${cart[i].name}</p>
+                                <p style="font-size: 1.2vw;">${ numberWithCommas(cart[i].price * cart[i].count) } THB</p>
+                            </div>
+                        </div>
+                        <div class="cartlist-right">
+                            <p onclick="deinitems('-', ${i})" class="btnc">-</p>
+                            <p id="countitems${i}" style="margin: 0 20px;">${cart[i].count}</p>
+                            <p onclick="deinitems('+', ${i})" class="btnc">+</p>
+                        </div>
+                    </div>`;
+        }
+        $("#mycart").html(html)
+    }
+    else {
+        $("#mycart").html(`<p>Not found product list</p>`)
+    }
+}
+
+function deinitems(action, index) {
+    if(action == '-') {
+        if(cart[index].count > 0) {
+            cart[index].count--;
+            $("#countitems"+index).text(cart[index].count)
+
+            if(cart[index].count <= 0) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Are you sure to delete?',
+                    showConfirmButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: 'Delete',
+                    cancelButtonText: 'Cancel'
+                }).then((res) => {
+                  if(res.isConfirmed) {
+                     cart.splice(index, 1) 
+                     console.log(cart)
+                     rendercart();
+                     $("#cartcount").css('display','flex').text(cart.length)
+                     
+                     if(cart.length <= 0) {
+                        $("#cartcount").css('display','none')
+                     }
+                  }  
+                  else {
+                    cart[index].count++;
+                    $("#countitems"+index).text(cart[index].count)
+                    rendercart();
+                  }
+                })
+            }
+            rendercart();
+        }
+        
+    }
+    else if(action == '+') {
+        cart[index].count++;
+        $("#countitems"+index).text(cart[index].count)
+        rendercart();
+    }
+}
+    </script>
+</body>
+
+</html>
